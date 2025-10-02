@@ -18,7 +18,12 @@
 
 ## Overview
 
-You are provided with a ready-to-use solution skeleton for a multi-layered Marketplace application. The solution follows a classic architecture: **Data Layer** (repositories, entities, EF Core), **Business Layer** (services, models, validation), and **Web API Layer** (controllers, DI, API endpoints). The project includes comprehensive unit and integration tests for each step.
+You are provided with a ready-to-use solution skeleton for a multi-layered Marketplace application. The solution follows a classic architecture: 
+- **Data Layer** (repositories, entities, EF Core)
+- **Business Layer** (services, models, validation)
+- **Web API Layer** (controllers, DI, API endpoints)
+  
+The project includes comprehensive unit and integration tests for each step.
 
 **Goal**: Implement business logic and data access in three incremental steps, each corresponding to a separate GitHub branch. At each step, you will run the provided tests to validate your implementation.
 
@@ -69,7 +74,9 @@ marketpl-tests-main/
 #### 1. Simplified Architecture Diagram
 <img src="/images/ArchitectureSimple.png" alt="Simplified Architecture" width="400" height="600">
 
-#### 2. Detailed Architecture Diagram
+#### 2. Detailed Architecture diagram
+
+Click the diagram for details.  
 ![Architecture](/images/Architecture.png)
 
 #### 3. Data Entities Diagram
@@ -79,6 +86,8 @@ marketpl-tests-main/
 <img src="/images/ModelsClassDiagram.png" alt="Business Models Diagram" width="600" height="700">
 
 #### 5. Business Layer Class Diagram
+
+Click the diagram for details   
 ![Business Layer Class Diagram](images/BusinessLayerClassDiagram.png)
 
 ### Layer Responsibilities
@@ -454,7 +463,7 @@ git merge main
 **✅ No .sln file conflicts!**
 
 The `epic/03-webapi` branch contains only the `WebApi` and `WebApi.Tests` projects without a `.sln` file. When merging:
-- WebAPI project will be added to main
+- WebApi project will be added to main
 - `.sln` file will remain from main (with already added Data and Business projects)
 
 **🔧 3. Adding WebAPI project to .sln file:**
@@ -462,7 +471,7 @@ The `epic/03-webapi` branch contains only the `WebApi` and `WebApi.Tests` projec
 After successful merge, you need to add the `WebApi` and `WebApi.Tests` projects to the `.sln` file. Use **dotnet CLI**:
 
 ```bash
-# Add WebAPI project to solution
+# Add WebApi project to solution
 dotnet sln add WebApi/WebApi.csproj
 
 # Check that project is added
@@ -520,17 +529,17 @@ After completing all three steps, the `main` branch will contain a complete solu
 ### 🔄 General Workflow Process:
 
 ```
-main (basic solution + .sln file)
+main (basic solution + .sln file).    
 ↓
-epic/01-data (Data project + .sln) → merge to main
+epic/01-data (Data project + .sln) → merge to main.   
 ↓
 main (Data ready + .sln)
 ↓
-epic/02-business (only Business project) → merge to main → add Business to .sln manually
+epic/02-business (only Business and Business.Tests projects) → merge to main → add Business and Business.Tests to .sln manually.    
 ↓
-main (Data + Business ready + .sln)
+main (Data + Business ready + .sln).      
 ↓
-epic/03-webapi (only WebAPI project) → merge to main → add WebAPI to .sln manually
+epic/03-webapi (only WebApi and WebApi.Tests projects) → merge to main → add WebApi and WebApi.Tests to .sln manually.    
 ↓
 main (complete solution ready + .sln)
 ```
@@ -588,7 +597,7 @@ Branches `epic/02-business` and `epic/03-webapi` contain only projects without a
 dotnet sln add Business/Business.csproj
 
 # Add WebAPI project
-dotnet sln add WebAPI/WebAPI.csproj
+dotnet sln add WebApi/WebApi.csproj
 
 # Check list of projects in solution
 dotnet sln list
