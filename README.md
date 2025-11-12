@@ -1,4 +1,4 @@
-# Multi-Layer Marketplace API — Step-by-Step Implementation
+# Layered Marketplace Web API — Step-by-Step Implementation
 
 ## Table of Contents
 - [Overview](#overview)
